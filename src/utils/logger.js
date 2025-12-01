@@ -1,5 +1,5 @@
 /**
- * Simple logger utility for CMX
+ * Simple logger utility for Newgate
  * Supports different log levels and formatted output
  */
 
@@ -23,7 +23,7 @@ class Logger {
   constructor(options = {}) {
     this.level = LOG_LEVELS[options.level?.toUpperCase()] ?? LOG_LEVELS.INFO;
     this.useColors = options.useColors !== false;
-    this.prefix = prefix || 'CMX';
+    this.prefix = prefix || 'Newgate';
   }
 
   _formatMessage(level, message, data) {

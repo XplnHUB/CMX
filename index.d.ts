@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http';
 
-export interface CMXRequest extends IncomingMessage {
+export interface NewgateRequest extends IncomingMessage {
   body: any;
   bodyType: 'json' | 'csv' | 'xml' | 'yaml' | 'formdata' | 'binary' | null;
   params: Record<string, string>;
@@ -9,9 +9,9 @@ export interface CMXRequest extends IncomingMessage {
   [key: string]: any;
 }
 
-export interface CMXResponse extends ServerResponse {
-  status(code: number): CMXResponse;
-  set(header: string, value: string | number | string[]): CMXResponse;
+export interface NewgateResponse extends ServerResponse {
+  status(code: number): NewgateResponse;
+  set(header: string, value: string | number | string[]): NewgateResponse;
   json(data: any): void;
   send(data: any): void;
   csv(data: any[] | string, options?: any): void;
@@ -23,9 +23,9 @@ export interface CMXResponse extends ServerResponse {
   download(filePath: string, filename?: string): void;
 }
 
-export type RouteHandler = (req: CMXRequest, res: CMXResponse, next: (err?: any) => void) => void | Promise<void>;
-export type Middleware = (req: CMXRequest, res: CMXResponse, next: (err?: any) => void) => void | Promise<void>;
-export type ErrorHandler = (err: any, req: CMXRequest, res: CMXResponse, next: (err?: any) => void) => void | Promise<void>;
+export type RouteHandler = (req: NewgateRequest, res: NewgateResponse, next: (err?: any) => void) => void | Promise<void>;
+export type Middleware = (req: NewgateRequest, res: NewgateResponse, next: (err?: any) => void) => void | Promise<void>;
+export type ErrorHandler = (err: any, req: NewgateRequest, res: NewgateResponse, next: (err?: any) => void) => void | Promise<void>;
 
 export interface CORSOptions {
   origin?: string | string[] | boolean | ((origin: string) => boolean);

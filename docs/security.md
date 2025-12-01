@@ -1,6 +1,6 @@
-# CMX Security Practices
+# Newgate Security Practices
 
-This guide covers security best practices when using the CMX framework.
+This guide covers security best practices when using the Newgate framework.
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ This guide covers security best practices when using the CMX framework.
 Always validate and sanitize user input before processing:
 
 ```javascript
-import App from 'cmx';
+import App from 'newgate';
 
 const app = new App();
 
@@ -102,7 +102,7 @@ app.post('/import', (req, res) => {
 Always set appropriate file upload limits:
 
 ```javascript
-import App from 'cmx';
+import App from 'newgate';
 
 const app = new App();
 
@@ -226,7 +226,7 @@ app.post('/upload', (req, res) => {
 
 ### XXE Protection (Enabled by Default)
 
-CMX enables XXE protection by default:
+Newgate enables XXE protection by default:
 
 ```javascript
 // Safe by default - external entities disabled
@@ -238,15 +238,15 @@ app.post('/data', (req, res) => {
 });
 ```
 
-# CMX Security Guide
+# Newgate Security Guide
 
-Security is a top priority in CMX. This document outlines the built-in security features and best practices for securing your CMX applications.
+Security is a top priority in Newgate. This document outlines the built-in security features and best practices for securing your Newgate applications.
 
 ## Built-in Security Features
 
 ### 1. XXE Protection
 
-XML External Entity (XXE) attacks are a common vulnerability in XML parsers. CMX's XML parser (`xml2js`) is configured with `safeMode: true` by default, which disables external entity replacement.
+XML External Entity (XXE) attacks are a common vulnerability in XML parsers. Newgate's XML parser (`xml2js`) is configured with `safeMode: true` by default, which disables external entity replacement.
 
 ```javascript
 // src/parsers/xml.js
@@ -261,7 +261,7 @@ const parser = new xml2js.Parser({
 
 ### 2. File Upload Limits
 
-To prevent Denial of Service (DoS) attacks via large file uploads, CMX enforces limits on file size and count.
+To prevent Denial of Service (DoS) attacks via large file uploads, Newgate enforces limits on file size and count.
 
 ```javascript
 // Default limits
@@ -280,7 +280,7 @@ JSON and other text-based parsers have default size limits to prevent memory exh
 
 ### 1. Input Validation
 
-Always validate user input. While CMX parses data, it does not validate the schema or content.
+Always validate user input. While Newgate parses data, it does not validate the schema or content.
 
 **Recommendation**: Use a validation library like `zod` or `joi`.
 
@@ -315,7 +315,7 @@ app.cors({
 
 ### 3. Helmet Integration
 
-Use `helmet` to set secure HTTP headers. Since CMX uses standard `req` and `res` objects, `helmet` can be used as middleware.
+Use `helmet` to set secure HTTP headers. Since Newgate uses standard `req` and `res` objects, `helmet` can be used as middleware.
 
 ```javascript
 import helmet from 'helmet';
@@ -330,7 +330,7 @@ app.use((req, res, next) => {
 Implement rate limiting to prevent brute-force attacks and API abuse.
 
 ```javascript
-import rateLimit from 'express-rate-limit'; // Compatible with CMX
+import rateLimit from 'express-rate-limit'; // Compatible with Newgate
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
@@ -366,7 +366,7 @@ npm update
 
 ## Reporting Vulnerabilities
 
-If you discover a security vulnerability in CMX, please do **not** open a public issue. Instead, email us at security@cmx.dev. We will investigate and address the issue promptly.
+If you discover a security vulnerability in Newgate, please do **not** open a public issue. Instead, email us at security@newgate.dev. We will investigate and address the issue promptly.
 ```
 
 ### Validate XML Structure
@@ -410,7 +410,7 @@ app.post('/xml-data', (req, res) => {
 Always restrict CORS origins in production:
 
 ```javascript
-import App from 'cmx';
+import App from 'newgate';
 
 const app = new App();
 

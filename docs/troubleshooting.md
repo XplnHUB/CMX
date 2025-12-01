@@ -1,6 +1,6 @@
-# CMX Troubleshooting Guide
+# Newgate Troubleshooting Guide
 
-Common issues and solutions when working with CMX.
+Common issues and solutions when working with Newgate.
 
 ## Table of Contents
 
@@ -14,12 +14,12 @@ Common issues and solutions when working with CMX.
 
 ## Installation Issues
 
-### `Error: Cannot find module 'cmx'`
+### `Error: Cannot find module 'newgate'`
 
 **Cause**: The package is not installed or `node_modules` is corrupted.
 
 **Solution**:
-1. Run `npm install cmx`
+1. Run `npm install newgate`
 2. Verify it exists in `package.json` dependencies.
 3. Delete `node_modules` and run `npm install` again.
 
@@ -53,7 +53,7 @@ Common issues and solutions when working with CMX.
 Ensure you are importing the default export and instantiating it.
 
 ```javascript
-import App from 'cmx';
+import App from 'newgate';
 const app = new App(); // Correct
 ```
 
@@ -98,7 +98,7 @@ app.get('/', (req, res) => res.send('hello'));
 
 ```javascript
 // Increase limits if needed
-const parseFormData = require('cmx/src/parsers/formdata.js');
+const parseFormData = require('newgate/src/parsers/formdata.js');
 
 app.post('/upload', (req, res) => {
   try {
@@ -520,7 +520,7 @@ function cacheSet(key, value) {
 
 **Solution**:
 ```bash
-npm install cmx
+npm install newgate
 ```
 
 ### "Port already in use"
@@ -585,7 +585,7 @@ If you encounter issues not covered here:
 1. Check the [API Documentation](./api.md)
 2. Review [Architecture Overview](./architecture.md)
 3. Check [Security Practices](./security.md)
-4. Open an issue on [GitHub](https://github.com/XplnHUB/cmx/issues)
+4. Open an issue on [GitHub](https://github.com/XplnHUB/newgate/issues)
 5. Check existing issues for similar problems
 
 ---

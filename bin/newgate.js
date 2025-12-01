@@ -7,34 +7,34 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const COMMANDS = {
-  create: 'Create a new CMX project',
+  create: 'Create a new Newgate project',
   help: 'Show help information',
   version: 'Show version'
 };
 
 function showHelp() {
   console.log(`
-CMX CLI - Multi-format Backend Framework
+Newgate CLI - Multi-format Backend Framework
 
 Usage:
-  cmx <command> [options]
+  newgate <command> [options]
 
 Commands:
-  create <name>     Create a new CMX project
+  create <name>     Create a new Newgate project
   help              Show this help message
   version           Show version information
 
 Examples:
-  cmx create my-api
-  cmx help
-  cmx version
+  newgate create my-api
+  newgate help
+  newgate version
 `);
 }
 
 function showVersion() {
   const packagePath = path.join(__dirname, '../package.json');
   const pkg = JSON.parse(fs.readFileSync(packagePath, 'utf-8'));
-  console.log(`CMX v${pkg.version}`);
+  console.log(`Newgate v${pkg.version}`);
 }
 
 function createProject(projectName) {
@@ -58,7 +58,7 @@ function createProject(projectName) {
   const packageJson = {
     name: projectName,
     version: '1.0.0',
-    description: 'CMX API',
+    description: 'Newgate API',
     type: 'module',
     main: 'src/index.js',
     scripts: {
@@ -67,7 +67,7 @@ function createProject(projectName) {
       test: 'vitest'
     },
     dependencies: {
-      cmx: '^1.0.0'
+      newgate: '^1.0.0'
     },
     devDependencies: {
       vitest: '^1.6.1'
@@ -80,7 +80,7 @@ function createProject(projectName) {
   );
 
   // Create main app file
-  const appCode = `import App from 'cmx';
+  const appCode = `import App from 'newgate';
 
 const app = new App();
 
@@ -133,7 +133,7 @@ build/
   // Create README
   const readme = `# ${projectName}
 
-An CMX API project.
+An Newgate API project.
 
 ## Getting Started
 
@@ -166,7 +166,7 @@ npm start
 
 ## Documentation
 
-For more information about CMX, visit: https://github.com/XplnHUB/cmx
+For more information about Newgate, visit: https://github.com/XplnHUB/newgate
 `;
 
   fs.writeFileSync(path.join(projectPath, 'README.md'), readme);
@@ -190,12 +190,12 @@ if (!command || command === 'help' || command === '--help' || command === '-h') 
   const projectName = args[1];
   if (!projectName) {
     console.error('Error: Project name is required');
-    console.error('Usage: cmx create <project-name>');
+    console.error('Usage: newgate create <project-name>');
     process.exit(1);
   }
   createProject(projectName);
 } else {
   console.error(`Error: Unknown command "${command}"`);
-  console.error('Run "cmx help" for usage information');
+  console.error('Run "newgate help" for usage information');
   process.exit(1);
 }

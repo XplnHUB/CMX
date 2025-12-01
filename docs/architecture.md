@@ -1,6 +1,6 @@
-# CMX Architecture Overview
+# Newgate Architecture Overview
 
-This document describes the internal architecture and design patterns of the CMX framework.
+This document describes the internal architecture and design patterns of the Newgate framework.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ This document describes the internal architecture and design patterns of the CMX
 
 ## Overview
 
-CMX is a lightweight, multi-format backend framework built on Node.js's native HTTP module. It provides:
+Newgate is a lightweight, multi-format backend framework built on Node.js's native HTTP module. It provides:
 
 - **Express-like routing** with parameter and wildcard support
 - **Automatic content-type detection** and parsing
@@ -62,7 +62,7 @@ The `Router` handles URL matching and handler dispatching.
 
 ### 3. Middleware Engine
 
-CMX uses a middleware stack similar to Connect/Express.
+Newgate uses a middleware stack similar to Connect/Express.
 - **Global Middleware**: Runs for every request.
 - **Path-Specific Middleware**: Runs for requests matching a path prefix.
 - **Route-Specific Middleware**: Runs for specific routes.
@@ -90,7 +90,7 @@ The `enhanceResponse` function adds helper methods to the native `ServerResponse
 ## Request Flow
 
 1. **Incoming Request**: HTTP server receives a request.
-2. **Enhancement**: `req` and `res` objects are enhanced with CMX properties and methods.
+2. **Enhancement**: `req` and `res` objects are enhanced with Newgate properties and methods.
 3. **Body Parsing**: The body is parsed based on `Content-Type`.
 4. **Middleware Execution**: Global and path-specific middleware are executed in order.
 5. **Route Matching**: The router finds a matching route handler.
@@ -100,9 +100,9 @@ The `enhanceResponse` function adds helper methods to the native `ServerResponse
 ## Module Structure
 
 ```
-cmx/
+newgate/
 ├── bin/
-│   └── cmx.js          # CLI entry point
+│   └── newgate.js          # CLI entry point
 ├── src/
 │   ├── core/
 │   │   ├── app.js      # Main App class
@@ -126,7 +126,7 @@ cmx/
 
 ## Extensibility
 
-CMX is designed to be extensible.
+Newgate is designed to be extensible.
 - **Custom Parsers**: Can be added by modifying the parser dispatcher (future feature: plugin system).
 - **Custom Middleware**: Standard middleware signature `(req, res, next)` allows easy integration of custom logic.
 - `xml(data)` - Send XML
@@ -203,7 +203,7 @@ Helper functions for common tasks.
 ## Module Structure
 
 ```
-cmx/
+newgate/
 ├── src/
 │   ├── core/
 │   │   ├── app.js           # Main App class

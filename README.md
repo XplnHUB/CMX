@@ -1,18 +1,18 @@
-<img# CMX
+<img# Newgate
 
-![CMX Banner](https://via.placeholder.com/1200x300?text=CMX+Framework)
+![Newgate Banner](https://via.placeholder.com/1200x300?text=Newgate+Framework)
 
 > A modern, lightweight, and multi-format backend framework for Node.js.
 
-[![npm version](https://img.shields.io/npm/v/cmx.svg)](https://www.npmjs.com/package/cmx)
-[![License](https://img.shields.io/npm/l/cmx.svg)](https://github.com/XplnHUB/cmx/blob/main/LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/XplnHUB/cmx/test.yml)](https://github.com/XplnHUB/cmx/actions)
+[![npm version](https://img.shields.io/npm/v/newgate.svg)](https://www.npmjs.com/package/newgate)
+[![License](https://img.shields.io/npm/l/newgate.svg)](https://github.com/XplnHUB/newgate/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/XplnHUB/newgate/test.yml)](https://github.com/XplnHUB/newgate/actions)
 
 ## Overview
 
-**CMX** is a modern Node.js backend framework designed for developers who want to handle multiple data formats effortlessly. It combines the simplicity of Express-style routing with automatic parsing for JSON, CSV, XML, YAML, form-data, and binary data.
+**Newgate** is a modern Node.js backend framework designed for developers who want to handle multiple data formats effortlessly. It combines the simplicity of Express-style routing with automatic parsing for JSON, CSV, XML, YAML, form-data, and binary data.
 
-Whether you're building a REST API, a data processing service, or an IoT backend, CMX has you covered.
+Whether you're building a REST API, a data processing service, or an IoT backend, Newgate has you covered.
 
 ## Features
 
@@ -27,7 +27,7 @@ Whether you're building a REST API, a data processing service, or an IoT backend
 ## Installation
 
 ```bash
-npm install cmx
+npm install newgate
 ```
 
 ## Quick Start
@@ -35,7 +35,7 @@ npm install cmx
 Create a simple server in `index.js`:
 
 ```javascript
-import App from 'cmx';
+import App from 'newgate';
 
 const app = new App();
 
@@ -57,7 +57,7 @@ app.post("/binary", (req, res) => {
 });
 
 // Start server
-app.listen(3000, () => console.log("cmx running on http://localhost:3000"));
+app.listen(3000, () => console.log("newgate running on http://localhost:3000"));
 ```
 
 ---

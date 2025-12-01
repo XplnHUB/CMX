@@ -1,11 +1,14 @@
 {
-  "name": "cmx",
+  "name": "newgate",
   "version": "1.2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "modern Node.js backend framework designed for developers who want to handle multiple data formats effortlessly. It combines the simplicity of Express-style routing with automatic parsing for JSON, CSV, XML, YAML, form-data, and binary data.",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "cmx": "./bin/cmx.js"
+    "newgate": "./bin/newgate.js"
   },
   "scripts": {
     "test": "vitest",
@@ -16,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XplnHUB/cmx.git"
+    "url": "git+https://github.com/XplnHUB/newgate.git"
   },
   "keywords": [
     "node",
@@ -43,7 +46,7 @@
     "file-upload",
     "iot",
     "edge",
-    "cmx",
+    "newgate",
     "webframework",
     "lightweight",
     "minimal",
@@ -52,9 +55,9 @@
   "author": "CodeMaverick-143 && XplnHUB",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/XplnHUB/cmx/issues"
+    "url": "https://github.com/XplnHUB/newgate/issues"
   },
-  "homepage": "https://github.com/XplnHUB/cmx#readme",
+  "homepage": "https://github.com/XplnHUB/newgate#readme",
   "dependencies": {
     "busboy": "^1.6.0",
     "csv-parse": "^5.6.0",
