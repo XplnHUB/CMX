@@ -1,4 +1,5 @@
 <img width="944" height="411" alt="NewGate-Banner" src="https://github.com/user-attachments/assets/af212f3a-0e96-42d1-a6d0-9ed34a178ad6" />
+
 > A modern, lightweight, and multi-format backend framework for Node.js.
 
 [![npm version](https://img.shields.io/npm/v/newgate.svg)](https://www.npmjs.com/package/newgate)
