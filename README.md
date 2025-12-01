@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<img# CMX
-
-![CMX Banner](https://via.placeholder.com/1200x300?text=CMX+Framework)
-=======
-<img width="944" height="411" alt="Screenshot 2025-12-01 at 23 56 44" src="https://github.com/user-attachments/assets/af212f3a-0e96-42d1-a6d0-9ed34a178ad6" />
->>>>>>> 669425f820dd7591746cf9a52ae610de0c335343
-
+<img width="944" height="411" alt="NewGate-Banner" src="https://github.com/user-attachments/assets/af212f3a-0e96-42d1-a6d0-9ed34a178ad6" />
 > A modern, lightweight, and multi-format backend framework for Node.js.
 
 [![npm version](https://img.shields.io/npm/v/newgate.svg)](https://www.npmjs.com/package/newgate)
