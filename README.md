@@ -1,5 +1,4 @@
-<img width="1264" height="372" alt="Screenshot 2025-12-01 at 22 52 31" src="https://github.com/user-attachments/assets/707a51a4-e456-49e6-8f3f-57da670eef7f" />
-
+<img width="944" height="411" alt="Screenshot 2025-12-01 at 23 56 44" src="https://github.com/user-attachments/assets/af212f3a-0e96-42d1-a6d0-9ed34a178ad6" />
 
 > A modern, lightweight, and multi-format backend framework for Node.js.
 
